@@ -1,11 +1,18 @@
-import { Button } from "@mui/material";
+'use client';
 
-export default function Home() {
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import PantryItemList from '../components/PantryItemList';
+
+const Home: React.FC = () => {
   return (
-    <main>
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </main>
+    <Container>
+      <Typography variant="h2" component="h1" gutterBottom>
+        Pantry Manager
+      </Typography>
+      <PantryItemList />
+    </Container>
   );
-}
+};
+
+export default Home;
